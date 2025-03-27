@@ -4,7 +4,7 @@
 
 A beautiful web interface for generating images using Pollinations.ai API with only the "flux" and "turbo" models.
 
-![Screenshot](assets/screenshots/screenshot1.png)
+![Screenshot](assets/scr.png)
 
 ## Features
 
