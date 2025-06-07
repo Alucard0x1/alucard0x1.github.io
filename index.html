@@ -590,7 +590,7 @@
 
                 if (!seed) {
                     // Using a large number for a wide range of random seeds
-                    seed = Math.floor(Math.random() * 100000000);
+                    let seed = Math.floor(Math.random() * 100000000);
                 }
                 
                 if (seed) url += `&seed=${seed}`;
