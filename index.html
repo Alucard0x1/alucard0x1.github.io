@@ -577,7 +577,7 @@
                 const model = document.getElementById('model').value;
                 const width = document.getElementById('width').value;
                 const height = document.getElementById('height').value;
-                const seed = document.getElementById('seed').value;
+                let seed = document.getElementById('seed').value;
                 const nologo = document.getElementById('nologo').checked;
                 const privateImg = document.getElementById('private').checked;
                 const enhance = document.getElementById('enhance').checked;
@@ -590,7 +590,7 @@
 
                 if (!seed) {
                     // Using a large number for a wide range of random seeds
-                    let seed = Math.floor(Math.random() * 100000000);
+                    seed = Math.floor(Math.random() * 100000000);
                 }
                 
                 if (seed) url += `&seed=${seed}`;
