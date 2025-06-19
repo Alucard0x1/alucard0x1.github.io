@@ -470,11 +470,6 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="referrer">Referrer (optional)</label>
-                            <input type="text" id="referrer" placeholder="Your website or app name">
-                        </div>
-
-                        <div class="form-group">
                             <div class="checkbox-group">
                                 <input type="checkbox" id="private">
                                 <label for="private">Private (don't show in public feed)</label>
@@ -515,7 +510,7 @@
         </div>
 
         <footer>
-            <p>Powered by Pollinations.ai API | Made with ❤️ for AI enthusiasts</p>><br>
+            <p>Powered by Pollinations.ai API | Made with ❤️ for AI enthusiasts</p><br>
             <p>Made by Kriztech</p>
         </footer>
     </div>
@@ -582,11 +577,11 @@
                 const privateImg = document.getElementById('private').checked;
                 const enhance = document.getElementById('enhance').checked;
                 const safe = document.getElementById('safe').checked;
-                const referrer = document.getElementById('referrer').value;
 
-                // Build URL
+                // Build URL with fixed referrer
                 let url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`;
                 url += `?model=${model}&width=${width}&height=${height}`;
+                url += `&referrer=https://altkriz.github.io/imagen`;
 
                 if (!seed) {
                     // Using a large number for a wide range of random seeds
@@ -598,7 +593,6 @@
                 if (privateImg) url += `&private=true`;
                 if (enhance) url += `&enhance=true`;
                 if (safe) url += `&safe=true`;
-                if (referrer) url += `&referrer=${encodeURIComponent(referrer)}`;
 
                 // Add timestamp to prevent caching
                 url += `&timestamp=${Date.now()}`;
